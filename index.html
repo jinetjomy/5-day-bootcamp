@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* --- General Reset & Fonts --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* --- Container Layout --- */
+        section {
+            background: #ffffff;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        /* --- Headings --- */
+        h1, h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 5px;
+            display: inline-block;
+            color: #3498db;
+        }
+
+        /* --- Hero Section (Section 1) --- */
+        .section1 {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .section1 h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .left {
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .left h1 {
+            font-size: 1.8rem;
+            color: #ffeaa7;
+        }
+
+        .right img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* --- Lists (Projects & Skills) --- */
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        ul li {
+            list-style-type: square;
+            color: #e84393;
+        }
+
+        ol li {
+            color: #0984e3;
+        }
+
+        /* --- Contact Form --- */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin-top: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #6c5ce7;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #00b894;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #009473;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .left {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="section1">
+        <h1>My Portfolio</h1>
+        <p>Welcome to my portfolio page. I'm a beginner web developer learning HTML.</p>
+       
+        <div class="hero-container">
+            <div class="left">
+                <h1>Jinet Jomy</h1>
+                <p>Building clean and simple web experiences</p>
+            </div>
+            <div class="right">
+                <img src="image.png" alt="Profile image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <h2>About</h2>
+        <p>I'm Jinet Jomy. I build simple web pages using basic HTML tags and modern styling.</p>
+    </section>
+        
+    <section>
+        <h2>Projects</h2>
+        <ul>     
+            <li>Personal Portfolio</li>
+            <li>Simple Landing Page</li>
+            <li>Contact Form Example</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ol>
+            <li>HTML</li>
+            <li>CSS basics</li>
+            <li>JavaScript basics</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <form action="" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+</body>
+</html>
