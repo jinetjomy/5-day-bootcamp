@@ -19,7 +19,24 @@
             line-height: 1.6;
             padding: 20px;
         }
+        
+        header{
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        } 
 
+        nav ul{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        
+
+        a{
+            text-decoration: none;
+            color:black;
+        }
         /* --- Container Layout --- */
         section {
             background: #ffffff;
@@ -175,8 +192,20 @@
     </style>
 </head>
 <body>
+  <header>
+           <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+               </ul>
+            </nav>
+      </header>
+  
     
-    <section class="section1">
+    <section class="section1" id="Home">
         <h1>My Portfolio</h1>
         <p>Welcome to my portfolio page. I'm a beginner web developer learning HTML.</p>
        
@@ -191,12 +220,12 @@
         </div>
     </section>
 
-    <section class="section2">
+    <section class="section2" id="About">
         <h2>About</h2>
         <p>I'm Jinet Jomy. I build simple web pages using basic HTML tags and modern styling.</p>
     </section>
         
-    <section>
+    <section class="Projects" id="Projects">
         <h2>Projects</h2>
         <ul>     
             <li>Personal Portfolio</li>
@@ -205,7 +234,7 @@
         </ul>
     </section>
 
-    <section>
+    <section class="Skills" id="Skills"> 
         <h2>Skills</h2>
         <ol>
             <li>HTML</li>
@@ -214,7 +243,7 @@
         </ol>
     </section>
 
-    <section>
+    <section class="Contact" id="Contact">
         <h2>Contact</h2>
         <form action="" method="post">
             <label for="name">Name:</label>
