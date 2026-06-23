@@ -189,12 +189,46 @@
                 margin-top: 15px;
             }
         }
+
+        nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background-color: lightgray;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
     </style>
 </head>
 <body>
   <header>
            <nav>
-                <ul>
+               <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul id="naviMenu">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Projects">Projects</a></li>
@@ -245,12 +279,15 @@
 
     <section class="Contact" id="Contact">
         <h2>Contact</h2>
-        <form action="" method="post">
+        <form id="contactForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name">
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Your Email">
+
+            <label for"message">Message:</label>
+            <input type="text" id="message" name="message" placeholder="Your Message">
             
             <input type="submit" value="Submit">
         </form>
