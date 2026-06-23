@@ -293,5 +293,30 @@
         </form>
     </section>
 
+    <script>
+
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    alert(
+        "Form Submitted Successfully!\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Message: " + message
+    );
+
+});
+
+</script>
+
 </body>
 </html>
